@@ -16,7 +16,7 @@ public class Pipe extends Rectangle {
         this.vx = vx;
         setBounds(x,y,w,h);
 
-        try { img = ImageIO.read(new File("pipe.png")); }
+        try { img = ImageIO.read(new File("../FlappyBird/pipe.png")); }
         catch(IOException e) {
             LOGGER.log(Level.SEVERE, "Could not load pipe image.");
             e.printStackTrace();

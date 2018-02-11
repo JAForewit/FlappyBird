@@ -1,11 +1,11 @@
 package FlappyBird;
 
+import javax.imageio.ImageIO;
 import java.awt.*;
 import java.io.File;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.imageio.ImageIO;
 
 /**
  * +x -> right
@@ -27,7 +27,7 @@ public class Bird extends Rectangle {
         initialY = y;
         setBounds(x,y,WIDTH,HEIGHT);
 
-        try { img = ImageIO.read(new File("bird.png")); }
+        try { img = ImageIO.read(new File("../FlappyBird/bird.png")); }
         catch(IOException e) {
             LOGGER.log(Level.SEVERE, "Could not load bird image.");
             e.printStackTrace();
