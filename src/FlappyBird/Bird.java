@@ -27,7 +27,7 @@ public class Bird extends Rectangle {
         initialY = y;
         setBounds(x,y,WIDTH,HEIGHT);
 
-        try { img = ImageIO.read(new File("../FlappyBird/bird.png")); }
+        try { img = ImageIO.read(new File("./src/FlappyBird/bird.png")); }
         catch(IOException e) {
             LOGGER.log(Level.SEVERE, "Could not load bird image.");
             e.printStackTrace();

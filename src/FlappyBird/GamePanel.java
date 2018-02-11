@@ -86,7 +86,7 @@ public class GamePanel extends JPanel implements KeyListener, ActionListener {
         g.setColor(Color.BLACK);
         g.drawString("Score: "+ score, 10, 30);
 
-        if (usingAI) g.drawString("AI", 10, 55);
+        if (usingAI) g.drawString("AI", 12, 55);
 
         if(paused) {
             g.setFont(pauseFont);
@@ -189,7 +189,7 @@ public class GamePanel extends JPanel implements KeyListener, ActionListener {
         data[0][1] = bird.getVy()/2d;
         data[0][2] = gap/100d;
         data[0][3] = gapY/100d;
-        data[0][4] = (distance+PIPE_W)/100d;
+        data[0][4] = distance/100d;
         data[1][0] = 0;
 
         if (usingAI) {
@@ -216,7 +216,7 @@ public class GamePanel extends JPanel implements KeyListener, ActionListener {
             gameDataSet.remove(gameDataSet.size()-1);
         }
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 2; i++) {
             for (int j = 0; j < gameDataSet.size(); j++) {
                 if (j % 2 == 0 && gameDataSet.get(j)[1][0] == 0) gameDataSet.remove(j);
             }

@@ -27,7 +27,7 @@ public class Main {
         OrganicNN net = new OrganicNN("net.structure"); // 5 4 1
         System.out.println("training network... please wait");
         long time = System.nanoTime();
-        net.train(trainingSet, 10000, 50, 0.3);
+        net.train(trainingSet, 100000, 50, 0.3);
         time = System.nanoTime() - time;
         System.out.println("finished network training...");
         System.out.println("traing time (ms): " + time/1000000);
